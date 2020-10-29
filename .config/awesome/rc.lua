@@ -69,7 +69,7 @@ local modkey1      = "Control"
 -- personal variables
 local browser           = "qutebrowser"
 local editor            = os.getenv("EDITOR") or "vim"
-local editorgui         = "geany"
+local editorgui         = "gedit"
 local filemanager       = "pcmanfm"
 local mailclient        = "geary"
 local mediaplayer       = "vlc"
@@ -79,6 +79,7 @@ local virtualmachine    = "virtualbox"
 
 -- awesome variables
 awful.util.terminal = terminal
+-- Tagnames are relying on Font Awesome Free Pack
 awful.util.tagnames = { " globe-asia " , " file-word ", " code ", " bug ", " folder ", " comment-dots ", " music ", " video ", " images " }
 awful.layout.suit.tile.left.mirror = true
 awful.layout.layouts = {
