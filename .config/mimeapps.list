@@ -1,0 +1,17 @@
+[Default Applications]
+inode/directory=Thunar-folder-handler.desktop
+application/xml=mousepad.desktop
+application/x-shellscript=mousepad.desktop;
+text/x-lua=mousepad.desktop
+text/plain=mousepad.desktop
+image/png=ristretto.desktop
+image/svg+xml=ristretto.desktop
+image/jpeg=ristretto.desktop
+
+[Added Associations]
+image/png=gimp.desktop;
+x-scheme-handler/http=exo-web-browser.desktop;
+x-scheme-handler/https=exo-web-browser.desktop;
+inode/directory=exo-file-manager.desktop;
+x-scheme-handler/trash=exo-file-manager.desktop;
+
