@@ -71,11 +71,7 @@ local browser           = "qutebrowser"
 local editor            = os.getenv("EDITOR") or "vim"
 local editorgui         = "gedit"
 local filemanager       = "pcmanfm"
-local mailclient        = "geary"
-local mediaplayer       = "vlc"
-local scrlocker         = "slimlock"
 local terminal          = "terminator"
-local virtualmachine    = "virtualbox"
 
 -- awesome variables
 awful.util.terminal = terminal
@@ -243,12 +239,6 @@ globalkeys = my_table.join(
         end,
         {description = "focus next by index", group = "client"}
     ),
-    awful.key({ altkey,           }, "k",
-        function ()
-            awful.client.focus.byidx(-1)
-        end,
-        {description = "focus previous by index", group = "client"}
-    ),
 
     -- Layout manipulation
     awful.key({ modkey, "Shift"   }, "j", function () awful.client.swap.byidx(  1)    end,
@@ -280,12 +270,6 @@ globalkeys = my_table.join(
             end
         end,
         {description = "toggle wibox", group = "awesome"}),
-
-    -- On the fly useless gaps change
-    awful.key({ altkey, "Control" }, "j", function () lain.util.useless_gaps_resize(1) end,
-              {description = "increment useless gaps", group = "tag"}),
-    awful.key({ altkey, "Control" }, "l", function () lain.util.useless_gaps_resize(-1) end,
-              {description = "decrement useless gaps", group = "tag"}),
 
     -- Standard program
     awful.key({ modkey,           }, "Return", function () awful.spawn( terminal ) end,
@@ -540,6 +524,7 @@ awful.rules.rules = {
           "Arandr",
           "Blueberry",
           "Galculator",
+          "ristretto",
           "Gnome-font-viewer",
           "Gpick",
           "Imagewriter",
@@ -644,10 +629,11 @@ client.connect_signal("focus", border_adjust)
 client.connect_signal("property::maximized", border_adjust)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 
+awful.spawn.with_shell("~/.config/awesome/autorun.sh")
 awful.spawn.with_shell("nitrogen --restore")
 awful.spawn.with_shell("picom --config  $HOME/.config/picom/picom.conf")
+awful.spawn.with_shell("light-locker")
 awful.spawn.with_shell("nm-applet")
 awful.spawn.with_shell("volumeicon")
 awful.spawn.with_shell("xfsettingsd")
 awful.spawn.with_shell("xfce4-power-manager")
-awful.spawn.with_shell("~/.config/awesome/autorun.sh")
