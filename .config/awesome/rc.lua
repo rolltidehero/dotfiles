@@ -201,8 +201,8 @@ globalkeys = my_table.join(
     awful.key({ modkey }, "f", function () awful.util.spawn("pcmanfm") end,
         {description = "pcmanfm" , group = "applications" }),
 
-    awful.key({ modkey }, "n", function () awful.util.spawn("flatpak run com.github.marktext.marktext") end,
-        {description = "mark text" , group = "applications" }),
+    awful.key({ modkey }, "n", function () awful.util.spawn("notable") end,
+        {description = "notable" , group = "applications" }),
 
     awful.key({ modkey }, "d", function () awful.util.spawn("flatpak run com.discordapp.Discord") end,
         {description = "discord" , group = "applications" }),
@@ -376,7 +376,7 @@ globalkeys = my_table.join(
 clientkeys = my_table.join(
     awful.key({ altkey, "Shift"   }, "m",      lain.util.magnify_client,
               {description = "magnify client", group = "client"}),
-    awful.key({ modkey,           }, "f",
+    awful.key({ modkey, "Shift"   }, "f",
         function (c)
             c.fullscreen = not c.fullscreen
             c:raise()
