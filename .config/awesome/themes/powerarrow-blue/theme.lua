@@ -280,18 +280,17 @@ function theme.at_screen_connect(s)
             s.mypromptbox,
             spr,
         },
-        s.mytasklist, -- Middle widget
+            wibox.container.background(wibox.container.margin(clock, 495, 8)),
+        -- s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
-            wibox.container.background(wibox.container.margin(wibox.widget.systray { layout = wibox.layout.align.horizontal }, 2, 3)),
-            vert_sep,
             wibox.container.background(wibox.container.margin(wibox.widget { theme.volume.widget, layout = wibox.layout.align.horizontal }, 2, 3)),
             vert_sep,
             wibox.container.background(wibox.container.margin(wibox.widget { mem.widget, layout = wibox.layout.align.horizontal }, 2, 3)),
             vert_sep,
             wibox.container.background(wibox.container.margin(wibox.widget { temp.widget, layout = wibox.layout.align.horizontal }, 4, 4)),
             vert_sep,
-            wibox.container.background(wibox.container.margin(clock, 4, 3)),
+            wibox.container.background(wibox.container.margin(wibox.widget.systray { layout = wibox.layout.align.horizontal }, 8, 4)),
            -- s.mylayoutbox,
         },
     }
