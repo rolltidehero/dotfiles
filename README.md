@@ -1,43 +1,32 @@
-# dotfiles
-All of my Manjaro/AwesomeWM dotfiles.
+# AwesomeWM
 
-## Testing
+![alt text](https://i.imgur.com/oCYxAla.png "AwesomeWM Screenshot")
 
-- There are some directories inside my .config folder that are just there for testing purposes only (such as microsoft-edge-dev).
+- This config is using FreeDesktop and a heavily modified version of the PowerArrow Theme
+- I suggest using XFCE as a base to install AwesomeWM, as this config is looking for a number of standard XFCE programs to function correctly
+- The compositor in use is Picom, the config for this is expected to be found in .config/picom/picom.conf
 
-## AwesomeWM
+# i3-Gaps
 
-- My AwesomeWM config is using FreeDesktop and a modified version of the Powerarrow theme.
-- I suggest using XFCE as a base to install AwesomeWM, as my config is looking for a number of XFCE default programs.
-- As for the compositor, my config is expecting to see Picom and its config file at .config/picom/picom.conf
+![alt text](https://i.imgur.com/IvTGINw.png "i3-gaps Screenshot")
 
-## Qutebrowser
+- This is still a work in progress, however all the underlying configurations all work as intended
+- Similar to my AwesomeWM config, a number of standard XFCE programs are required
+- Top bar is Polybar, config for this is included
+- Font used on Polybar is Ubuntu Regular
+- The compositor in use is Picom, the config for this is expected to be found in .config/picom.conf
 
-- If you take a look at my Qutebrowser config.py you will see that the 'startpage' is a local file. This local directory has not been included in this commit, but I will upload at a later date once a few bugs and issues have been taken care of.
+# Qutebrowser
 
-## Default programs
+![alt text](https://i.imgur.com/uI3Skvv.png "Qutebrowser Screenshot")
 
-- Terminal Emulator:
-	- Terminator
-- Text Editors:
-	- Doom Emacs
-	- Vim
-- File Manager:
-	- Pcmanfm
-- Image Editor:
-	- Gimp
-- Browsers:
-	- Qutebrowser (main)
-	- Brave Browser (backup)
-- Screenshot Tool:
-	- XFCE4 Screenshooter
-- Compositor:
-	- Picom
-- Wallpaper Utility:
-	- Nitrogen
+- Image shown on Qutebrowser is a custom startpage, check my Startpage repo if you would like this aswell
+- YouTube Advertisements have been blocked with my Qutebrowser config file
+- Status bar has been permanently disabled
 
-## IMPORTANT!
+# Doom Emacs
 
-- There is some bugs in my AwesomeWM config, nothing system breaking but smaller things such as brightness keys not working on Laptops.
-- I am figuring out the simplest solutions to these problems still and repo will be updated once fixes have been made.
+![alt text](https://i.imgur.com/xXSMs8K.png "Emacs Screenshot")
 
+- Theme being used is 'doom-dracula, however background colour has been changed
+- Primary font is Ubuntu Mono
