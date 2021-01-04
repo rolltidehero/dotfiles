@@ -1,197 +1,137 @@
-/**
- * ROFI Color theme
- * User: Qball
- * Copyright: Dave Davenport
- */
-
 configuration {
-	modi: 							"combi,:rofind";
-	//combi-modi: 					"window,drun,\/:rofind,run";
-	combi-modi: 					"window,drun,run";
-	me-select-entry:				"MouseSecondary";
-	me-accept-entry:				"MousePrimary";
-	scroll-method: 1;
-    // The display name of this browser
-    display-ssh:                   "ssh";
-    // The display name of this browser
-    display-run:                    "#! ";
-    // The display name of this browser
-    display-drun:                   "";
-    // The display name of this browser
-    display-window:                 "";
-    display-combi:                  "Go to";
-    show-icons: true;
-}
+        modi: "window,run,ssh,combi,drun";
+        combi-modi: "window,drun";
+        font: "Source Code Pro 12";
+        terminal: "alacritty";
+        theme: "gorgeHousse";
 
-
-/**
- * User: Qball
- * Copyright: Dave Davenport
- */
-* {
-    foreground:  #ffeedd;
-    backlight:   #ccffeedd;
-    background-color:  transparent;
-    dark: #1c1c1c;
-    // Black
-    black:       #2f343f;
-    lightblack:  #554444;
-    tlightblack:  #554444cc;
-    //
-    // Red
-    red:         #cd5c5c;
-    lightred:    #cc5533;
-    //
-    // Green
-    green:       #86af80;
-    lightgreen:  #88cc22;
-    //
-    // Yellow
-    yellow:      #e8ae5b;
-    lightyellow:     #ffa75d;
-    //
-    // Blue
-    blue:      #6495ed;
-    lightblue:     #87ceeb;
-    //
-    // Magenta
-    magenta:      #deb887;
-    lightmagenta:     #996600;
-    //
-    // Cyan
-    cyan:      #1ABB9B;
-    tcyan:      #ccb0c4de;
-    lightcyan:     #b0c4de;
-    //
-    // White
-    white:      #bbaa99;
-    lightwhite:     #ddccbb;
-    //
-    // Bold, Italic, Underline
-    highlight:     underline bold #ffffff;
-
-    transparent: rgba(0,0,0,0);
-    font: "xos4 Terminus 16";
+/*      width: 50;*/
+/*      lines: 15;*/
+/*      columns: 1;*/
+/*      bw: 1;*/
+/*      location: 0;*/
+/*      padding: 5;*/
+/*      yoffset: 0;*/
+/*      xoffset: 0;*/
+/*      fixed-num-lines: true;*/
+/*      show-icons: false;*/
+/*      ssh-client: "ssh";*/
+/*      ssh-command: "{terminal} -e {ssh-client} {host}";*/
+/*      run-command: "{cmd}";*/
+/*      run-list-command: "";*/
+/*      run-shell-command: "{terminal} -e {cmd}";*/
+/*      window-command: "xkill -id {window}";*/
+/*      drun-icon-theme: ;*/
+/*      disable-history: false;*/
+/*      sort: false;*/
+/*      levenshtein-sort: false;*/
+/*      case-sensitive: false;*/
+/*      cycle: true;*/
+/*      sidebar-mode: false;*/
+/*      eh: 1;*/
+/*      auto-select: false;*/
+/*      parse-hosts: false;*/
+/*      parse-known-hosts: true;*/
+/*      matching: "normal";*/
+/*      tokenize: true;*/
+/*      m: "-5";*/
+/*      line-margin: 2;*/
+/*      line-padding: 1;*/
+/*      filter: ;*/
+/*      separator-style: "dash";*/
+/*      hide-scrollbar: false;*/
+/*      fullscreen: false;*/
+/*      fake-transparency: false;*/
+/*      dpi: -1;*/
+/*      threads: 0;*/
+/*      scrollbar-width: 8;*/
+/*      scroll-method: 0;*/
+/*      fake-background: "screenshot";*/
+/*      window-format: "{w}    {i}{c}   {t}";*/
+/*      click-to-exit: true;*/
+/*      show-match: true;*/
+/*      color-normal: ;*/
+/*      color-urgent: ;*/
+/*      color-active: ;*/
+/*      color-window: ;*/
+/*      plugin-path: "/usr/lib64/rofi";*/
+/*      pid: "/run/user/1000/rofi.pid";*/
+/*      display-window: ;*/
+/*      display-windowcd: ;*/
+/*      display-run: ;*/
+/*      display-ssh: ;*/
+/*      display-drun: ;*/
+/*      display-combi: ;*/
+/*      display-keys: ;*/
+/*      kb-primary-paste: "Control+V,Shift+Insert";*/
+/*      kb-secondary-paste: "Control+v,Insert";*/
+/*      kb-clear-line: "Control+w";*/
+/*      kb-move-front: "Control+a";*/
+/*      kb-move-end: "Control+e";*/
+/*      kb-move-word-back: "Alt+b";*/
+/*      kb-move-word-forward: "Alt+f";*/
+/*      kb-move-char-back: "Left,Control+b";*/
+/*      kb-move-char-forward: "Right,Control+f";*/
+/*      kb-remove-word-back: "Control+Alt+h,Control+BackSpace";*/
+/*      kb-remove-word-forward: "Control+Alt+d";*/
+/*      kb-remove-char-forward: "Delete,Control+d";*/
+/*      kb-remove-char-back: "BackSpace,Control+h";*/
+/*      kb-remove-to-eol: "Control+k";*/
+/*      kb-remove-to-sol: "Control+u";*/
+/*      kb-accept-entry: "Control+j,Control+m,Return,KP_Enter";*/
+/*      kb-accept-custom: "Control+Return";*/
+/*      kb-accept-alt: "Shift+Return";*/
+/*      kb-delete-entry: "Shift+Delete";*/
+/*      kb-mode-next: "Shift+Right,Control+Tab";*/
+/*      kb-mode-previous: "Shift+Left,Control+ISO_Left_Tab";*/
+/*      kb-row-left: "Control+Page_Up";*/
+/*      kb-row-right: "Control+Page_Down";*/
+/*      kb-row-up: "Up,Control+p,ISO_Left_Tab";*/
+/*      kb-row-down: "Down,Control+n";*/
+/*      kb-row-tab: "Tab";*/
+/*      kb-page-prev: "Page_Up";*/
+/*      kb-page-next: "Page_Down";*/
+/*      kb-row-first: "Home,KP_Home";*/
+/*      kb-row-last: "End,KP_End";*/
+/*      kb-row-select: "Control+space";*/
+/*      kb-screenshot: "Alt+S";*/
+/*      kb-toggle-case-sensitivity: "grave,dead_grave";*/
+/*      kb-toggle-sort: "Alt+grave";*/
+/*      kb-cancel: "Escape,Control+g,Control+bracketleft";*/
+/*      kb-custom-1: "Alt+1";*/
+/*      kb-custom-2: "Alt+2";*/
+/*      kb-custom-3: "Alt+3";*/
+/*      kb-custom-4: "Alt+4";*/
+/*      kb-custom-5: "Alt+5";*/
+/*      kb-custom-6: "Alt+6";*/
+/*      kb-custom-7: "Alt+7";*/
+/*      kb-custom-8: "Alt+8";*/
+/*      kb-custom-9: "Alt+9";*/
+/*      kb-custom-10: "Alt+0";*/
+/*      kb-custom-11: "Alt+exclam";*/
+/*      kb-custom-12: "Alt+at";*/
+/*      kb-custom-13: "Alt+numbersign";*/
+/*      kb-custom-14: "Alt+dollar";*/
+/*      kb-custom-15: "Alt+percent";*/
+/*      kb-custom-16: "Alt+dead_circumflex";*/
+/*      kb-custom-17: "Alt+ampersand";*/
+/*      kb-custom-18: "Alt+asterisk";*/
+/*      kb-custom-19: "Alt+parenleft";*/
+/*      kb-select-1: "Super+1";*/
+/*      kb-select-2: "Super+2";*/
+/*      kb-select-3: "Super+3";*/
+/*      kb-select-4: "Super+4";*/
+/*      kb-select-5: "Super+5";*/
+/*      kb-select-6: "Super+6";*/
+/*      kb-select-7: "Super+7";*/
+/*      kb-select-8: "Super+8";*/
+/*      kb-select-9: "Super+9";*/
+/*      kb-select-10: "Super+0";*/
+/*      ml-row-left: "Mouse6";*/
+/*      ml-row-right: "Mouse7";*/
+/*      ml-row-up: "Mouse4";*/
+/*      ml-row-down: "Mouse5";*/
+/*      me-select-entry: "Mouse1";*/
+/*      me-accept-entry: "MouseD1";*/
+/*      me-accept-custom: "Control+MouseD1";*/
 }
-#window {
-    location: center;
-    anchor:   center;
-    transparency: "screenshot";
-    padding: 10px;
-    border:  0px;
-    border-radius: 10px;
-    color: @magenta;
-    background-color: @transparent;
-    spacing: 0;
-    children:  [vertb, mainbox];
-    orientation: horizontal;
-}
-
-#mainbox {
-    spacing: 0;
-    children: [ inputbar, message, listview ];
-}
-
-#message {
-    border-color: @foreground;
-    border:  0px 2px 2px 2px;
-//    border-radius: 10px;
-    padding: 5;
-    background-color: @tcyan;
-}
-#message {
-    font: "xos4 Terminus 10";
-    color: @black;
-}
-
-#inputbar {
-    color: @cyan;
-    padding: 11px;
-    background-color: @black;
-    border: 2px 2px 2px 2px;
-    border-radius:  30px 30px 0px 0px;
-    border-color: @foreground;
-    font: "xos4 Terminus 18";
-}
-#entry,prompt,case-indicator {
-    text-font: inherit;
-    text-color:inherit;
-}
-#listview {
-    padding: 8px;
-    border-radius: 0px 0px 30px 30px;
-    border-color: @foreground;
-    border: 0px 2px 2px 2px;
-    background-color: #1c1c1ccc;
-    dynamic: false;
-    lines: 15;
-}
-#element {
-    padding: 3px;
-    vertical-align: 0.5;
-//    border: 2px;
-    border-radius: 4px;
-    background-color: transparent;
-    color: @foreground;
-    font:inherit;
-}
-#element selected.normal {
-    background-color: @cyan;
-}
-#element normal active {
-    foreground: @lightblue;
-}
-#element normal urgent {
-    foreground: @lightred;
-}
-#element alternate normal {
-}
-#element alternate active {
-    foreground: @lightblue;
-}
-#element alternate urgent {
-    foreground: @lightred;
-}
-#element selected active {
-    background-color: @cyan;
-    foreground: @dark;
-}
-#element selected urgent {
-    background-color: @lightred;
-    foreground: @dark;
-}
-#element normal normal {
-
-}
-
-#vertb {
-    expand: false;
-    children: [ dummy0, sidebar, dummy1  ];
-}
-#dummy0,  dummy1 {
-    expand: true;
-}
-
-#sidebar {
-    expand: false;
-    orientation: vertical;
-    spacing: 0px;
-    border: 0px 0px 0px 0px;
-}
-#button {
-    font: "FontAwesome 26";
-    padding: 6px;
-    border: 2px 0px 2px 2px;
-    border-radius: 4px 0px 0px 4px;
-    background-color: @tlightblack;
-    border-color: @foreground;
-    color: @foreground;
-    horizontal-align: 0.5;
-}
-#button selected normal {
-    color: @dark;
-    border: 2px 0px 2px 2px;
-    background-color: @backlight;
-    border-color: @foreground;
-}
-
