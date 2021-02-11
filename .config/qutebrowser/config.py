@@ -13,6 +13,8 @@ def filter_yt(info: interceptor.Request):
 
 interceptor.register(filter_yt)
 
+config.load_autoconfig(False)
+
 ## Background color of selected even tabs.
 ## Type: QtColor
 c.colors.tabs.selected.even.bg = 'darkMagenta'
@@ -75,7 +77,7 @@ c.input.insert_mode.auto_load = True
 ##   - always: Always show the statusbar.
 ##   - never: Always hide the statusbar.
 ##   - in-mode: Show the statusbar when in modes other than normal mode.
-c.statusbar.show = 'never'
+c.statusbar.show = 'in-mode'
 
 ## Page(s) to open at the start.
 ## Type: List of FuzzyUrl, or FuzzyUrl
