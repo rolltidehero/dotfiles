@@ -6,6 +6,15 @@
 - I suggest using XFCE as a base to install AwesomeWM, as this config is looking for a number of standard XFCE programs to function correctly
 - The compositor in use is Picom, the config for this is expected to be found in .config/picom/picom.conf
 
+# Qtile
+
+![alt text](https://i.imgur.com/sbTqhdF.png "Qtile Screenshot")
+
+- Config is an edited version of the default config provided by ArcoLinux
+- As with the AwesomeWM config, a number of XFCE programs are expected to be installed
+- Workplace Icons on the bar are from the Font Awesome 5 Free pack, without this installed you will only see text instead of the workplace icons
+- Compositor in use is Picom. Config is expected to be in .config/qtile/scripts/picom.conf
+
 # i3-Gaps
 
 ![alt text](https://i.imgur.com/IvTGINw.png "i3-gaps Screenshot")
