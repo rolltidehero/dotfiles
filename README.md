@@ -8,7 +8,7 @@
 
 # Qtile
 
-![alt text](https://i.imgur.com/sbTqhdF.png "Qtile Screenshot")
+![alt text](https://i.imgur.com/DxRhn3c.png "Qtile Screenshot")
 
 - Config is an edited version of the default config provided by ArcoLinux
 - As with the AwesomeWM config, a number of XFCE programs are expected to be installed
