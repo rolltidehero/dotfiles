@@ -1,39 +1,12 @@
-# Copyright (c) 2010 Aldo Cortesi
-# Copyright (c) 2010, 2014 dequis
-# Copyright (c) 2012 Randall Ma
-# Copyright (c) 2012-2014 Tycho Andersen
-# Copyright (c) 2012 Craig Barnes
-# Copyright (c) 2013 horsik
-# Copyright (c) 2013 Tao Sauvage
-#
-# Permission is hereby granted, free of charge, to any person obtaining a copy
-# of this software and associated documentation files (the "Software"), to deal
-# in the Software without restriction, including without limitation the rights
-# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-# copies of the Software, and to permit persons to whom the Software is
-# furnished to do so, subject to the following conditions:
-#
-# The above copyright notice and this permission notice shall be included in
-# all copies or substantial portions of the Software.
-#
-# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-# SOFTWARE.
-
-
 import os
 import re
 import socket
 import subprocess
+import arcobattery
 from libqtile.config import Drag, Key, Screen, Group, Drag, Click, Rule
 from libqtile.command import lazy
 from libqtile import layout, bar, widget, hook
 from libqtile.widget import Spacer
-#import arcobattery
 
 #mod4 or mod = super key
 mod = "mod4"
@@ -63,7 +36,6 @@ keys = [
     Key([mod, "shift"], "f", lazy.window.toggle_fullscreen()),
     Key([mod], "q", lazy.window.kill()),
 
-
 # SUPER + SHIFT KEYS
 
     Key([mod, "shift"], "q", lazy.window.kill()),
@@ -78,11 +50,11 @@ keys = [
     Key([mod], "Up", lazy.layout.up()),
     Key([mod], "Down", lazy.layout.down()),
     Key([mod, "shift"], "Left", lazy.layout.left()),
-    Key(["mod1"], "Tab", lazy.layout.right()),
+    Key(["mod1"], "Tab", lazy.layout.next()),
     Key([mod], "k", lazy.layout.up()),
     Key([mod], "j", lazy.layout.down()),
     Key([mod], "h", lazy.layout.left()),
-    Key([mod], "l", lazy.layout.right()),
+    Key([mod, "shift"], "p", lazy.layout.right()),
 
 
 # RESIZE UP, DOWN, LEFT, RIGHT
@@ -331,18 +303,10 @@ def init_widgets_list():
                #          threshold = 80
                #          ),
                # # battery option 1  ArcoLinux Horizontal icons do not forget to import arcobattery at the top
-               # widget.Sep(
+               #widget.Sep(
                #          linewidth = 1,
                #          padding = 10,
                #          foreground = colors[2],
-               #          background = colors[1]
-               #          ),
-               # arcobattery.BatteryIcon(
-               #          padding=0,
-               #          scale=0.7,
-               #          y_poss=2,
-               #          theme_path=home + "/.config/qtile/icons/battery_icons_horiz",
-               #          update_interval = 5,
                #          background = colors[1]
                #          ),
                # # battery option 2  from Qtile
@@ -399,37 +363,37 @@ def init_widgets_list():
                #          foreground = colors[5],
                #          background = colors[1],
                #         ),
-               # widget.Sep(
-               #          linewidth = 1,
-               #          padding = 10,
-               #          foreground = colors[2],
-               #          background = colors[1]
-               #          ),
-               widget.TextBox(
-                        font="Font Awesome 5 Free Solid",
-                        text=" calendar-alt ",
-                        foreground=colors[8],
-                        background=colors[1],
-                        padding = 0,
-                        fontsize=17
+               widget.Sep(
+                        linewidth = 1,
+                        padding = 20,
+                        foreground = colors[8],
+                        background = colors[1]
                         ),
                widget.Clock(
                         font="Ubuntu Mono Bold",
                         foreground = colors[5],
                         background = colors[1],
                         fontsize = 16,
-                        format="%Y-%m-%d %H:%M "
+                        format=" %d-%m-%Y %H:%M "
                         ),
-               # widget.Sep(
-               #          linewidth = 1,
-               #          padding = 10,
-               #          foreground = colors[2],
-               #          background = colors[1]
-               #          ),
+               widget.Sep(
+                        linewidth = 1,
+                        padding = 20,
+                        foreground = colors[8],
+                        background = colors[1]
+                        ),
                widget.Systray(
                         background=colors[1],
                         icon_size=20,
                         padding = 4
+                        ),
+               arcobattery.BatteryIcon(
+                        padding=0,
+                        scale=0.5,
+                        y_poss=5,
+                        theme_path=home + "/.config/qtile/icons/battery_icons_horiz",
+                        update_interval = 10,
+                        background = colors[1]
                         ),
               ]
     return widgets_list
@@ -450,8 +414,8 @@ widgets_screen2 = init_widgets_screen2()
 
 
 def init_screens():
-    return [Screen(top=bar.Bar(widgets=init_widgets_screen1(), size=35, opacity=0.8)),
-            Screen(top=bar.Bar(widgets=init_widgets_screen2(), size=35, opacity=0.8))]
+    return [Screen(top=bar.Bar(widgets=init_widgets_screen1(), size=35, opacity=0.9, margin=5)),
+            Screen(top=bar.Bar(widgets=init_widgets_screen2(), size=35, opacity=0.9, margin=5))]
 screens = init_screens()
 
 
@@ -564,4 +528,4 @@ auto_fullscreen = True
 
 focus_on_window_activation = "focus" # or smart
 
-wmname = "LG3D"
+wmname = "Qtile"

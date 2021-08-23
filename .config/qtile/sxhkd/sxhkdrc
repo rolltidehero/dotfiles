@@ -8,7 +8,7 @@
 
 # Qutebrowser
 super + b
-	qutebrowser
+	firejail qutebrowser
 
 # Emacs
 super + e
