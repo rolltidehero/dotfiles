@@ -19,6 +19,7 @@
 
 ![alt text](https://i.imgur.com/IvTGINw.png "i3-gaps Screenshot")
 
+- I'm no longer supporting i3-gaps as I just don't ever feel the need to use it. This can still provide you with a good starting point though
 - This is still a work in progress, however all the underlying configurations all work as intended
 - Similar to my AwesomeWM config, a number of standard XFCE programs are required
 - Top bar is Polybar, config for this is included
