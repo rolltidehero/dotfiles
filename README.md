@@ -1,10 +1,20 @@
-# AwesomeWM
+# Install Instructions
 
-![alt text](https://i.imgur.com/oCYxAla.png "AwesomeWM Screenshot")
+- Please note the install script is still in a beta state
+- Currently the install script only supports the install of Qtile, AwesomeWM, i3-Gaps, Neofetch and Qutebrowser configs.
+- The install script DOES NOT install the actual programs, it only installs my configs hosted in this repo.
 
-- This config is using FreeDesktop and a heavily modified version of the PowerArrow Theme
-- I suggest using XFCE as a base to install AwesomeWM, as this config is looking for a number of standard XFCE programs to function correctly
-- The compositor in use is Picom, the config for this is expected to be found in .config/picom/picom.conf
+1. Clone respository to your computer and make the install script executable:
+```
+git clone https://github.com/DanCarzano/dotfiles
+cd dotfiles
+chmod +x install.sh
+```
+2. Launch the install script:
+```
+./install.sh
+```
+3. Make sure you go through and backup existing directories. Use the backup section of the install script for this. 
 
 # Qtile
 
@@ -14,6 +24,15 @@
 - As with the AwesomeWM config, a number of XFCE programs are expected to be installed
 - Workplace Icons on the bar are from the Font Awesome 5 Free pack, without this installed you will only see text instead of the workplace icons
 - Compositor in use is Picom. Config is expected to be in .config/qtile/scripts/picom.conf
+- Picom fork in use is from https://github.com/jonaburg/picom
+
+# AwesomeWM
+
+![alt text](https://i.imgur.com/oCYxAla.png "AwesomeWM Screenshot")
+
+- This config is using FreeDesktop and a heavily modified version of the PowerArrow Theme
+- I suggest using XFCE as a base to install AwesomeWM, as this config is looking for a number of standard XFCE programs to function correctly
+- The compositor in use is Picom, the config for this is expected to be found in .config/picom/picom.conf
 
 # i3-Gaps
 
