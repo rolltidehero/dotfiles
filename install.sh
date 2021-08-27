@@ -8,7 +8,6 @@ intro() {
     echo
     echo -e "{1}    Make backup of existing config"
     echo -e "{2}    Install new config"
-    echo -e "{3}    Remove existing config"
     echo -e "{99}   Exit"
     echo
     read -p "Selection: " menuResponse
@@ -111,6 +110,7 @@ backup() {
             echo
             echo -e "Backup successful!"
             echo -e "Returning to main menu"
+            intro
         else
             echo -e "Error: I3 and I3status directory does not exist"
             echo -e "Exiting script"
@@ -129,6 +129,7 @@ backup() {
             echo
             echo -e "Backup successful!"
             echo -e "Returning to main menu"
+            intro
         else
             echo -e "Error: Neofetch directory does not exist"
             echo -e "Exiting script"
@@ -146,6 +147,7 @@ backup() {
             echo
             echo -e "Backup successful!"
             echo -e "Returning to main menu"
+            intro
         else
             echo -e "Error: Qutebrowser config.py does not exist"
             echo -e "Exiting script"
@@ -183,7 +185,7 @@ install() {
     # Install Qtile config
     if [ "$installResponse" == "1" ]
     then
-        cp -r .config/qtile/ ~/.config/
+        cp -r qtile/ ~/.config/
         echo
         echo -e "Qtile config installed successfully!"
         echo -e "Returning to main menu"
@@ -193,7 +195,14 @@ install() {
     # Install AwesomeWM config
     if [ "$installResponse" == "2" ]
     then
-        cp -r .config/awesome/ ~/.config/
+        cp -r awesome/ ~/.config/
+
+        if [ -d "/home/$USER/.config/picom" ]
+        then
+            mv /home/$USER/.config/picom ~/.config/picom.backup
+        fi
+
+        cp -r picom/ ~/.config/
         echo
         echo -e "AwesomeWM config installed successfully!"
         echo -e "Returning to main menu"
@@ -203,8 +212,8 @@ install() {
     # Install I3-Gaps config
     if [ "$installResponse" == "3" ]
     then
-        cp -r .config/i3/ ~/.config/
-        cp -r .config/i3status/ ~/.config/
+        cp -r i3/ ~/.config/
+        cp -r i3status/ ~/.config/
         echo
         echo -e "I3 config installed successfully!"
         echo -e "Returning to main menu"
@@ -214,9 +223,19 @@ install() {
     # Install Neofetch config
     if [ "$installResponse" == "4" ]
     then
-        cp -r .config/neofetch/ ~/.config/
+        cp -r neofetch/ ~/.config/
         echo
         echo -e "Neofetch config installed successfully!"
+        echo -e "Returning to main menu"
+        intro
+    fi
+
+    # Install Qutebrowser config
+    if [ "$installResponse" == "5" ]
+    then
+        cp qutebrowser/config.py ~/.config/qutebrowser/
+        echo
+        echo -e "Qutebrowser config installed successfully!"
         echo -e "Returning to main menu"
         intro
     fi
