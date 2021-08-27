@@ -1,6 +1,6 @@
 # Install Instructions
 
-- Please note the install script is still in a beta state
+- Please note the install script is still in an alpha state
 - Currently the install script only supports the install of Qtile, AwesomeWM, i3-Gaps, Neofetch and Qutebrowser configs.
 - The install script DOES NOT install the actual programs, it only installs my configs hosted in this repo.
 
