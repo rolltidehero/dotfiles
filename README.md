@@ -14,6 +14,7 @@
 - As with the AwesomeWM config, a number of XFCE programs are expected to be installed
 - Workplace Icons on the bar are from the Font Awesome 5 Free pack, without this installed you will only see text instead of the workplace icons
 - Compositor in use is Picom. Config is expected to be in .config/qtile/scripts/picom.conf
+- Picom fork in use is from https://github.com/jonaburg/picom
 
 # i3-Gaps
 
