@@ -234,6 +234,7 @@ install() {
     if [ "$installResponse" == "5" ]
     then
         cp qutebrowser/config.py ~/.config/qutebrowser/
+        cp -r qutebrowser/Homepage/ ~/.config/qutebrowser/
         echo
         echo -e "Qutebrowser config installed successfully!"
         echo -e "Returning to main menu"
