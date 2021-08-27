@@ -1,3 +1,19 @@
+# Install Instructions
+
+- Please note the install script is still in a beta state
+
+1. Clone respository to your computer and make the install script executable:
+```
+git clone https://github.com/DanCarzano/dotfiles
+cd dotfiles
+chmod +x install.sh
+```
+2. Launch the install script:
+```
+./install.sh
+```
+3. Make sure you go through and backup existing directories. Use the backup section of the install script for this. 
+
 # AwesomeWM
 
 ![alt text](https://i.imgur.com/oCYxAla.png "AwesomeWM Screenshot")
