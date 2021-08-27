@@ -1,5 +1,0 @@
-2020/10/25-10:49:37.724 44c8 Reusing MANIFEST /home/chrollo/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/MANIFEST-000001
-2020/10/25-10:50:12.210 44c8 Level-0 table #5: started
-2020/10/25-10:50:12.217 44c8 Level-0 table #5: 3400 bytes OK
-2020/10/25-10:50:12.220 44c8 Delete type=0 #3
-2020/10/25-10:50:12.220 44c8 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
