@@ -16,14 +16,6 @@ chmod +x install.sh
 ```
 3. Make sure you go through and backup existing directories. Use the backup section of the install script for this. 
 
-# AwesomeWM
-
-![alt text](https://i.imgur.com/oCYxAla.png "AwesomeWM Screenshot")
-
-- This config is using FreeDesktop and a heavily modified version of the PowerArrow Theme
-- I suggest using XFCE as a base to install AwesomeWM, as this config is looking for a number of standard XFCE programs to function correctly
-- The compositor in use is Picom, the config for this is expected to be found in .config/picom/picom.conf
-
 # Qtile
 
 ![alt text](https://i.imgur.com/DxRhn3c.png "Qtile Screenshot")
@@ -33,6 +25,14 @@ chmod +x install.sh
 - Workplace Icons on the bar are from the Font Awesome 5 Free pack, without this installed you will only see text instead of the workplace icons
 - Compositor in use is Picom. Config is expected to be in .config/qtile/scripts/picom.conf
 - Picom fork in use is from https://github.com/jonaburg/picom
+
+# AwesomeWM
+
+![alt text](https://i.imgur.com/oCYxAla.png "AwesomeWM Screenshot")
+
+- This config is using FreeDesktop and a heavily modified version of the PowerArrow Theme
+- I suggest using XFCE as a base to install AwesomeWM, as this config is looking for a number of standard XFCE programs to function correctly
+- The compositor in use is Picom, the config for this is expected to be found in .config/picom/picom.conf
 
 # i3-Gaps
 
