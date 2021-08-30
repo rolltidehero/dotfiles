@@ -55,7 +55,7 @@ chmod +x install.sh
 
 # Doom Emacs
 
-![alt text](https://i.imgur.com/xXSMs8K.png "Emacs Screenshot")
+![alt text](https://i.imgur.com/e409b43.png "Emacs Screenshot")
 
 - Theme being used is 'doom-dracula, however background colour has been changed
 - Primary font is Ubuntu Mono
