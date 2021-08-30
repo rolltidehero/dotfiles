@@ -28,7 +28,7 @@ chmod +x install.sh
 
 # AwesomeWM
 
-![alt text](https://i.imgur.com/oCYxAla.png "AwesomeWM Screenshot")
+![alt text](https://i.imgur.com/pQpyH8c.png "AwesomeWM Screenshot")
 
 - This config is using FreeDesktop and a heavily modified version of the PowerArrow Theme
 - I suggest using XFCE as a base to install AwesomeWM, as this config is looking for a number of standard XFCE programs to function correctly
