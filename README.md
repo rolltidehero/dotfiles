@@ -1,7 +1,7 @@
 # Install Instructions
 
 - Please note the install script is still in an alpha state
-- Currently the install script only supports the install of Qtile, AwesomeWM, i3-Gaps, Neofetch and Qutebrowser configs.
+- Currently the install script only supports the install of Qtile, AwesomeWM, Neofetch and Qutebrowser configs.
 - The install script DOES NOT install the actual programs, it only installs my configs hosted in this repo.
 
 1. Clone respository to your computer and make the install script executable:
@@ -39,6 +39,15 @@ chmod +x install.sh
 - Image shown on Qutebrowser is a custom startpage, check my Startpage repo if you would like this aswell
 - YouTube Advertisements have been blocked with my Qutebrowser config file
 - Status bar has been permanently disabled
+
+# Kitty Terminal Emulator
+
+![alt text](https://i.imgur.com/G4SSiK5.png "Kitty Screenshot")
+
+- Not much has really changed from the default Kitty config
+- Changed font size and font type
+- Changed background colour and added transparency - The blur effect is done with Picom
+- The Penguin image is drawn using Chafa from my .zshrc config
 
 # Doom Emacs
 
