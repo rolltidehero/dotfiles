@@ -49,6 +49,14 @@ chmod +x install.sh
 - Changed background colour and added transparency - The blur effect is done with Picom
 - The Penguin image is drawn using Chafa from my .zshrc config
 
+# Vim
+
+![alt text](https://i.imgur.com/MfPxaQl.png "Vim Screenshot")
+
+- This Vim config is more setup as a simple text editor rather than an IDE
+- Main changes are things like the status line being permanently shown, indenting, syntax highlighting and line numbers
+- No plugins are in use on this config
+
 # Doom Emacs
 
 ![alt text](https://i.imgur.com/e409b43.png "Emacs Screenshot")
