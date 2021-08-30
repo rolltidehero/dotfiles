@@ -47,7 +47,7 @@ chmod +x install.sh
 
 # Qutebrowser
 
-![alt text](https://i.imgur.com/uI3Skvv.png "Qutebrowser Screenshot")
+![alt text](https://i.imgur.com/sCK4o5L.png "Qutebrowser Screenshot")
 
 - Image shown on Qutebrowser is a custom startpage, check my Startpage repo if you would like this aswell
 - YouTube Advertisements have been blocked with my Qutebrowser config file
