@@ -6,9 +6,9 @@ intro() {
     echo
     echo -e "Use the corresponding number to make a selection"
     echo
-    echo -e "{1}    Make backup of existing config"
-    echo -e "{2}    Install new config"
-    echo -e "{99}   Exit"
+    echo -e "\e[91m{1}    \e[32mMake backup of existing config"
+    echo -e "\e[91m{2}    \e[32mInstall new config"
+    echo -e "\e[91m{99}   \e[32mExit\e[0m"
     echo
     read -p "Selection: " menuResponse
 
@@ -35,12 +35,14 @@ backup() {
     echo
     echo -e "Which existing config would you like to backup?"
     echo
-    echo -e "{1}    Qtile"
-    echo -e "{2}    AwesomeWM"
-    echo -e "{3}    Neofetch"
-    echo -e "{4}    Qutebrowser"
-    echo -e "{00}   Return to main menu"
-    echo -e "{99}   Exit"
+    echo -e "\e[91m{1}    \e[32mQtile"
+    echo -e "\e[91m{2}    \e[32mAwesomeWM"
+    echo -e "\e[91m{3}    \e[32mNeofetch"
+    echo -e "\e[91m{4}    \e[32mQutebrowser"
+    echo -e "\e[91m{5}    \e[32mKitty"
+    echo -e "\e[91m{6}    \e[32mVimrc"
+    echo -e "\e[91m{00}   \e[32mReturn to main menu"
+    echo -e "\e[91m{99}   \e[32mExit\e[0m"
     echo
     read -p "Selection: " backupResponse
 
@@ -118,17 +120,53 @@ backup() {
     if [ "$backupResponse" == "4" ]
     then
 
-        if [ -f "/home/$USER/.config/qutebrowser/config.py" ]
+        if [ -d "/home/$USER/.config/qutebrowser" ]
         then
             echo
             echo -e "Qutebrowser config exists - Creating backup"
-            mv /home/$USER/.config/qutebrowser/config.py ~/.config/qutebrowser/config.py.backup
+            mv /home/$USER/.config/qutebrowser ~/.config/qutebrowser.backup
             echo
             echo -e "Backup successful!"
             echo -e "Returning to main menu"
             intro
         else
             echo -e "Error: Qutebrowser config.py does not exist"
+            echo -e "Exiting script"
+        fi
+    fi
+
+    if [ "$backupResponse" == "5" ]
+    then
+
+        if [ -d "/home/$USER/.config/kitty" ]
+        then
+            echo
+            echo -e "Kitty exists - Creating backup"
+            mv /home/$USER/.config/kitty ~/.config/kitty.backup
+            echo
+            echo -e "Backup successful!"
+            echo -e "Returning to main menu"
+            intro
+        else
+            echo -e "Error: Kitty directory does not exist"
+            echo -e "Exiting script"
+        fi
+    fi
+
+    if [ "$backupResponse" == "6" ]
+    then
+
+        if [ -f "/home/$USER/.vimrc" ]
+        then
+            echo
+            echo -e ".vimrc exists - Creating backup"
+            mv /home/$USER/.vimrc ~/.vimrc.backup
+            echo
+            echo -e "Backup successful!"
+            echo -e "Returning to main menu"
+            intro
+        else
+            echo -e "Error: Vimrc file does not exist"
             echo -e "Exiting script"
         fi
     fi
@@ -141,12 +179,14 @@ install() {
     echo
     echo -e "Which config would you like to install?"
     echo
-    echo -e "{1}    Qtile"
-    echo -e "{2}    AwesomeWM"
-    echo -e "{3}    Neofetch"
-    echo -e "{4}    Qutebrowser"
-    echo -e "{00}   Return to main menu"
-    echo -e "{99}   Exit"
+    echo -e "\e[91m{1}    \e[32mQtile"
+    echo -e "\e[91m{2}    \e[32mAwesomeWM"
+    echo -e "\e[91m{3}    \e[32mNeofetch"
+    echo -e "\e[91m{4}    \e[32mQutebrowser"
+    echo -e "\e[91m{5}    \e[32mKitty"
+    echo -e "\e[91m{6}    \e[32mVimrc"
+    echo -e "\e[91m{00}   \e[32mReturn to main menu"
+    echo -e "\e[91m{99}   \e[32mExit\e[0m"
     echo
     read -p "Selection: " installResponse
 
@@ -200,10 +240,29 @@ install() {
     # Install Qutebrowser config
     if [ "$installResponse" == "4" ]
     then
-        cp qutebrowser/config.py ~/.config/qutebrowser/
-        cp -r qutebrowser/Homepage/ ~/.config/qutebrowser/
+        cp -r qutebrowser/ ~/.config
         echo
         echo -e "Qutebrowser config installed successfully!"
+        echo -e "Returning to main menu"
+        intro
+    fi
+
+    # Install Kitty config
+    if [ "$installResponse" == "5" ]
+    then
+        cp kitty/ ~/.config
+        echo
+        echo -e "Kitty config installed successfully!"
+        echo -e "Returning to main menu"
+        intro
+    fi
+
+    # Install Vim config
+    if [ "$installResponse" == "6" ]
+    then
+        cp vim/.vimrc /home/$USER/
+        echo
+        echo -e "Vim config installed successfully!"
         echo -e "Returning to main menu"
         intro
     fi
