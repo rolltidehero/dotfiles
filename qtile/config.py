@@ -231,7 +231,7 @@ def init_widgets_list():
                         disable_drag = True,
                         active = colors[9],
                         inactive = colors[5],
-                        rounded = False,
+                        rounded = True,
                         highlight_method = "text",
                         this_current_screen_border = colors[8],
                         foreground = colors[2],
@@ -248,13 +248,27 @@ def init_widgets_list():
                #         foreground = colors[5],
                #         background = colors[1]
                #         ),
-               widget.Net(
-                         font="Ubuntu Mono Bold",
-                         fontsize=14,
-                         interface="wlp6s0",
+               #widget.Net(
+               #          font="Ubuntu Mono Bold",
+               #          fontsize=14,
+               #          interface="wlp6s0",
+               #          foreground=colors[2],
+               #          background=colors[1],
+               #          padding = 0,
+               #          ),
+               widget.NetGraph(
+                         font="Noto Sans",
+                         fontsize=12,
+                         bandwidth="down",
+                         interface="auto",
+                         fill_color = colors[2],
                          foreground=colors[2],
                          background=colors[1],
+                         graph_color = colors[2],
+                         border_color = colors[1],
                          padding = 0,
+                         border_width = 1,
+                         line_width = 1,
                          ),
                widget.Sep(
                         linewidth = 1,
@@ -272,20 +286,6 @@ def init_widgets_list():
                #          padding = 10,
                #          foreground = colors[2],
                #          background = colors[1]
-               #          ),
-               # widget.NetGraph(
-               #          font="Noto Sans",
-               #          fontsize=12,
-               #          bandwidth="down",
-               #          interface="auto",
-               #          fill_color = colors[8],
-               #          foreground=colors[2],
-               #          background=colors[1],
-               #          graph_color = colors[8],
-               #          border_color = colors[2],
-               #          padding = 0,
-               #          border_width = 1,
-               #          line_width = 1,
                #          ),
                # widget.Sep(
                #          linewidth = 1,
@@ -316,13 +316,6 @@ def init_widgets_list():
                #          foreground = colors[2],
                #          background = colors[1]
                #          ),
-               # widget.Battery(
-               #          font="Noto Sans",
-               #          update_interval = 10,
-               #          fontsize = 12,
-               #          foreground = colors[5],
-               #          background = colors[1],
-	           #          ),
                # widget.TextBox(
                #          font="FontAwesome",
                #          text="  ",
@@ -355,14 +348,15 @@ def init_widgets_list():
                #          padding = 0,
                #          fontsize=16
                #          ),
-               # widget.Memory(
-               #          font="Noto Sans",
-               #          format = '{MemUsed}M/{MemTotal}M',
-               #          update_interval = 1,
-               #          fontsize = 12,
-               #          foreground = colors[5],
-               #          background = colors[1],
-               #         ),
+               widget.Memory(
+                        font="Ubuntu Mono Bold",
+                        measure_mem = 'M',
+                        format = '{MemUsed: .0f}{mm} /{MemTotal: .0f}{mm}',
+                        update_interval = 1,
+                        fontsize = 16,
+                        foreground = colors[2],
+                        background = colors[1],
+                       ),
                widget.Sep(
                         linewidth = 1,
                         padding = 20,
@@ -393,6 +387,20 @@ def init_widgets_list():
                         y_poss=5,
                         theme_path=home + "/.config/qtile/icons/battery_icons_horiz",
                         update_interval = 10,
+                        background = colors[1]
+                        ),
+               widget.Battery(
+                         font="Ubuntu Mono Bold",
+                         format='{percent:2.0%}',
+                         update_interval = 10,
+                         fontsize = 16,
+                         foreground = colors[2],
+                         background = colors[1],
+	                     ),
+               widget.Sep(
+                        linewidth = 1,
+                        padding = 10,
+                        foreground = colors[1],
                         background = colors[1]
                         ),
               ]
