@@ -18,7 +18,7 @@ chmod +x install.sh
 
 # Qtile
 
-![alt text](https://i.imgur.com/DxRhn3c.png "Qtile Screenshot")
+![alt text](https://i.imgur.com/wfuLHKV.png "Qtile Screenshot")
 
 - Workplace Icons on the bar are from the Font Awesome 5 Free pack, without this installed you will only see text instead of the workplace icons
 - Compositor in use is Picom. Config is expected to be in .config/qtile/scripts/picom.conf
