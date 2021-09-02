@@ -37,7 +37,7 @@ chmod +x install.sh
 ![alt text](https://i.imgur.com/sCK4o5L.png "Qutebrowser Screenshot")
 
 - Image shown on Qutebrowser is a custom startpage, check my Startpage repo if you would like this aswell
-- On line 84 in the config.py - Change "chrollo" to your username in the file path
+- On line 84 in the config.py - Change "username" to your username in the file path
 - YouTube Advertisements have been blocked with my Qutebrowser config file
 - Status bar has been permanently disabled
 
