@@ -81,6 +81,6 @@ c.statusbar.show = 'in-mode'
 
 ## Page(s) to open at the start.
 ## Type: List of FuzzyUrl, or FuzzyUrl
-c.url.start_pages = ['file:///home/chrollo/.config/qutebrowser/Homepage/homepage.html']
+c.url.start_pages = ['file:///home/username/.config/qutebrowser/Homepage/homepage.html']
 
 config.bind('C', 'download-clear')
