@@ -364,4 +364,4 @@ ex ()
 #hfetch
 # install lolcat
 #sfetch | lolcat
-chafa -s 50x50 /home/chrollo/Pictures/Penguin.png
+chafa -s 50x50 /home/$USER/Pictures/Penguin.png
