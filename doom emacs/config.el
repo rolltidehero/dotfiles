@@ -28,10 +28,10 @@
 (setq doom-theme 'doom-dracula)
 
 (custom-set-faces
- '(default ((t (:background "#040014")))))
+ '(default ((t (:background "#080008")))))
 
-(set-frame-parameter (selected-frame)'alpha '(0.93))
-(add-to-list 'default-frame-alist'(alpha . (0.93)))
+(set-frame-parameter (selected-frame)'alpha '(0.9))
+(add-to-list 'default-frame-alist'(alpha . (0.9)))
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
@@ -61,4 +61,3 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
-
