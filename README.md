@@ -18,7 +18,7 @@ chmod +x install.sh
 
 # Qtile
 
-![alt text](https://i.imgur.com/wfuLHKV.png "Qtile Screenshot")
+![alt text](https://i.imgur.com/w141Rv7.png "Qtile Screenshot")
 
 - Workplace Icons on the bar are from the Font Awesome 5 Free pack, without this installed you will only see text instead of the workplace icons
 - Compositor in use is Picom. Config is expected to be in .config/qtile/scripts/picom.conf
@@ -34,7 +34,7 @@ chmod +x install.sh
 
 # Qutebrowser
 
-![alt text](https://i.imgur.com/sCK4o5L.png "Qutebrowser Screenshot")
+![alt text](https://i.imgur.com/7IZxWRn.png "Qutebrowser Screenshot")
 
 - Image shown on Qutebrowser is a custom startpage, check my Startpage repo if you would like this aswell
 - On line 84 in the config.py - Change "username" to your username in the file path
@@ -43,7 +43,7 @@ chmod +x install.sh
 
 # Kitty Terminal Emulator
 
-![alt text](https://i.imgur.com/G4SSiK5.png "Kitty Screenshot")
+![alt text](https://i.imgur.com/awg7g2e.png "Kitty Screenshot")
 
 - Not much has really changed from the default Kitty config
 - Changed font size and font type
@@ -52,7 +52,7 @@ chmod +x install.sh
 
 # Vim
 
-![alt text](https://i.imgur.com/MfPxaQl.png "Vim Screenshot")
+![alt text](https://i.imgur.com/8rwaNYL.png "Vim Screenshot")
 
 - This Vim config is more setup as a simple text editor rather than an IDE
 - Main changes are things like the status line being permanently shown, indenting, syntax highlighting and line numbers
@@ -60,7 +60,7 @@ chmod +x install.sh
 
 # Doom Emacs
 
-![alt text](https://i.imgur.com/e409b43.png "Emacs Screenshot")
+![alt text](https://i.imgur.com/yqPN9Cf.png "Emacs Screenshot")
 
 - Theme being used is 'doom-dracula, however background colour has been changed
 - Primary font is Ubuntu Mono
