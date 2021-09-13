@@ -17,7 +17,7 @@ config.load_autoconfig(False)
 
 ## Background color of selected even tabs.
 ## Type: QtColor
-c.colors.tabs.selected.even.bg = 'darkMagenta'
+c.colors.tabs.selected.even.bg = 'black'
 
 ## Foreground color of selected even tabs.
 ## Type: QtColor
@@ -25,7 +25,7 @@ c.colors.tabs.selected.even.fg = 'white'
 
 ## Background color of selected odd tabs.
 ## Type: QtColor
-c.colors.tabs.selected.odd.bg = 'darkMagenta'
+c.colors.tabs.selected.odd.bg = 'black'
 
 ## Foreground color of selected odd tabs.
 ## Type: QtColor
@@ -81,6 +81,6 @@ c.statusbar.show = 'in-mode'
 
 ## Page(s) to open at the start.
 ## Type: List of FuzzyUrl, or FuzzyUrl
-c.url.start_pages = ['file:///home/username/.config/qutebrowser/Homepage/homepage.html']
+c.url.start_pages = ['file:///home/chrollo/.config/qutebrowser/Homepage/homepage.html']
 
 config.bind('C', 'download-clear')

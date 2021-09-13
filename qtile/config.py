@@ -181,7 +181,7 @@ layout_theme = init_layout_theme()
 
 
 layouts = [
-    layout.MonadTall(margin=8, border_width=2, border_focus="#FF00FF", border_normal="#550055"),
+    layout.MonadTall(margin=4, border_width=2, border_focus="#660033", border_normal="#44475a"),
     layout.MonadWide(margin=8, border_width=2, border_focus="#5e81ac", border_normal="#4c566a"),
     layout.Matrix(**layout_theme),
     layout.Bsp(**layout_theme),
@@ -194,15 +194,15 @@ layouts = [
 
 def init_colors():
     return [["#2F343F", "#2F343F"], # color 0
-            ["#040014", "#040014"], # color 1
-            ["#c0c5ce", "#c0c5ce"], # color 2
+            ["#080008", "#080008"], # color 1
+            ["#f8f8f2", "#f8f8f2"], # color 2
             ["#fba922", "#fba922"], # color 3
             ["#3384d0", "#3384d0"], # color 4
-            ["#FF00FF", "#FF00FF"], # color 5
+            ["#CC0066", "#CC0066"], # color 5
             ["#cd1f3f", "#cd1f3f"], # color 6
             ["#62FF00", "#62FF00"], # color 7
-            ["#0000FF", "#0000FF"], # color 8
-            ["#FF00FF", "#FF00FF"]] # color 9
+            ["#6272a4", "#6272a4"], # color 8
+            ["#CC0066", "#CC0066"]] # color 9
 
 
 colors = init_colors()
@@ -225,7 +225,7 @@ def init_widgets_list():
                         fontsize = 20,
                         margin_y = 2,
                         margin_x = 0,
-                        padding_y = 6,
+                        padding_y = 8,
                         padding_x = 5,
                         borderwidth = 0,
                         disable_drag = True,
@@ -281,18 +281,6 @@ def init_widgets_list():
                         foreground = colors[2],
                         background = colors[1],
                         ),
-               # widget.Sep(
-               #          linewidth = 1,
-               #          padding = 10,
-               #          foreground = colors[2],
-               #          background = colors[1]
-               #          ),
-               # widget.Sep(
-               #          linewidth = 1,
-               #          padding = 10,
-               #          foreground = colors[2],
-               #          background = colors[1]
-               #          ),
                # # do not activate in Virtualbox - will break qtile
                # widget.ThermalSensor(
                #          foreground = colors[5],
@@ -301,28 +289,6 @@ def init_widgets_list():
                #          metric = True,
                #          padding = 3,
                #          threshold = 80
-               #          ),
-               # # battery option 1  ArcoLinux Horizontal icons do not forget to import arcobattery at the top
-               #widget.Sep(
-               #          linewidth = 1,
-               #          padding = 10,
-               #          foreground = colors[2],
-               #          background = colors[1]
-               #          ),
-               # # battery option 2  from Qtile
-               # widget.Sep(
-               #          linewidth = 1,
-               #          padding = 10,
-               #          foreground = colors[2],
-               #          background = colors[1]
-               #          ),
-               # widget.TextBox(
-               #          font="FontAwesome",
-               #          text="  ",
-               #          foreground=colors[6],
-               #          background=colors[1],
-               #          padding = 0,
-               #          fontsize=16
                #          ),
                # widget.CPUGraph(
                #          border_color = colors[2],
@@ -333,20 +299,6 @@ def init_widgets_list():
                #          line_width = 1,
                #          core = "all",
                #          type = "box"
-               #          ),
-               # widget.Sep(
-               #          linewidth = 1,
-               #          padding = 10,
-               #          foreground = colors[2],
-               #          background = colors[1]
-               #          ),
-               # widget.TextBox(
-               #          font="FontAwesome",
-               #          text="  ",
-               #          foreground=colors[4],
-               #          background=colors[1],
-               #          padding = 0,
-               #          fontsize=16
                #          ),
                widget.Memory(
                         font="Ubuntu Mono Bold",
