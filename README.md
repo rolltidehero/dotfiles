@@ -43,7 +43,7 @@ chmod +x install.sh
 
 # Kitty Terminal Emulator
 
-![alt text](https://i.imgur.com/awg7g2e.png "Kitty Screenshot")
+![alt text](https://i.imgur.com/Xpip2Ms.png "Kitty Screenshot")
 
 - Not much has really changed from the default Kitty config
 - Changed font size and font type
@@ -52,7 +52,7 @@ chmod +x install.sh
 
 # Vim
 
-![alt text](https://i.imgur.com/8rwaNYL.png "Vim Screenshot")
+![alt text](https://i.imgur.com/7q7vHy2.png "Vim Screenshot")
 
 - This Vim config is more setup as a simple text editor rather than an IDE
 - Main changes are things like the status line being permanently shown, indenting, syntax highlighting and line numbers
