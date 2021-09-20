@@ -45,6 +45,7 @@ chmod +x install.sh
 
 ![alt text](https://i.imgur.com/Xpip2Ms.png "Kitty Screenshot")
 
+- Custom oh-my-zsh Theme is included in the ZSH folder
 - Not much has really changed from the default Kitty config
 - Changed font size and font type
 - Changed background colour and added transparency - The blur effect is done with Picom
