@@ -41,6 +41,14 @@ chmod +x install.sh
 - YouTube Advertisements have been blocked with my Qutebrowser config file
 - Status bar has been permanently disabled
 
+# Rofi
+
+![alt text](https://i.imgur.com/aQ25B12.png "Rofi Screenshot")
+
+- Custom Rofi theme "Chrollo"
+- Font being used is Ubuntu Mono
+- Theme should be placed in /usr/share/rofi/themes
+
 # Kitty Terminal Emulator
 
 ![alt text](https://i.imgur.com/Xpip2Ms.png "Kitty Screenshot")
