@@ -2,11 +2,12 @@ import os
 import re
 import socket
 import subprocess
-import arcobattery
-from libqtile.config import Drag, Key, Screen, Group, Drag, Click, Rule
-from libqtile.command import lazy
+from typing import List  # noqa: F401
 from libqtile import layout, bar, widget, hook
+from libqtile.config import Click, Drag, Group, Key, Match, Screen, Rule
+from libqtile.command import lazy
 from libqtile.widget import Spacer
+import arcobattery
 
 #mod4 or mod = super key
 mod = "mod4"
@@ -36,6 +37,7 @@ keys = [
     Key([mod, "shift"], "f", lazy.window.toggle_fullscreen()),
     Key([mod], "q", lazy.window.kill()),
 
+
 # SUPER + SHIFT KEYS
 
     Key([mod, "shift"], "q", lazy.window.kill()),
@@ -49,15 +51,15 @@ keys = [
 # CHANGE FOCUS
     Key([mod], "Up", lazy.layout.up()),
     Key([mod], "Down", lazy.layout.down()),
-    Key([mod, "shift"], "Left", lazy.layout.left()),
-    Key(["mod1"], "Tab", lazy.layout.next()),
+    Key([mod], "Left", lazy.layout.left()),
+    Key([mod], "Right", lazy.layout.right()),
     Key([mod], "k", lazy.layout.up()),
     Key([mod], "j", lazy.layout.down()),
     Key([mod], "h", lazy.layout.left()),
-    Key([mod, "shift"], "p", lazy.layout.right()),
+    Key([mod], "l", lazy.layout.right()),
+    Key(["mod1"], "Tab", lazy.layout.next()),
 
-
-# RESIZE UP, DOWN, LEFT, RIGHT
+  # RESIZE UP, DOWN, LEFT, RIGHT
     Key([mod, "control"], "l",
         lazy.layout.grow_right(),
         lazy.layout.grow(),
@@ -159,8 +161,8 @@ for i in groups:
 #CHANGE WORKSPACES
         Key([mod], i.name, lazy.group[i.name].toscreen()),
         Key([mod], "Right", lazy.screen.next_group()),
-        Key([mod], "Left", lazy.screen.prev_group()),
-       # Key(["mod1", "shift"], "Tab", lazy.screen.next_group()),
+        Key([mod], "Left" , lazy.screen.prev_group()),
+       # Key(["mod1"], "Tab", lazy.screen.next_group()),
        # Key(["mod1", "shift"], "Tab", lazy.screen.prev_group()),
 
 # MOVE WINDOW TO SELECTED WORKSPACE 1-10 AND STAY ON WORKSPACE
@@ -182,7 +184,7 @@ layout_theme = init_layout_theme()
 
 layouts = [
     layout.MonadTall(margin=4, border_width=2, border_focus="#660033", border_normal="#44475a"),
-    layout.MonadWide(margin=8, border_width=2, border_focus="#5e81ac", border_normal="#4c566a"),
+    layout.MonadWide(margin=4, border_width=2, border_focus="#660033", border_normal="#44475a"),
     layout.Matrix(**layout_theme),
     layout.Bsp(**layout_theme),
     layout.Floating(**layout_theme),
@@ -191,7 +193,6 @@ layouts = [
 ]
 
 # COLORS FOR THE BAR
-
 def init_colors():
     return [["#2F343F", "#2F343F"], # color 0
             ["#000000", "#000000"], # color 1
@@ -244,32 +245,32 @@ def init_widgets_list():
                         background = colors[1]
                         ),
                #widget.CurrentLayout(
-               #         font = "Ubuntu Mono Bold",
+               #         font = "Noto Sans Bold",
                #         foreground = colors[5],
                #         background = colors[1]
                #         ),
-               #widget.Net(
-               #          font="Ubuntu Mono Bold",
-               #          fontsize=14,
-               #          interface="wlp6s0",
+               # widget.Net(
+               #          font="Noto Sans",
+               #          fontsize=12,
+               #          interface="enp0s31f6",
                #          foreground=colors[2],
                #          background=colors[1],
                #          padding = 0,
                #          ),
                widget.NetGraph(
-                         font="Noto Sans",
-                         fontsize=12,
-                         bandwidth="down",
-                         interface="auto",
-                         fill_color = colors[2],
-                         foreground=colors[2],
-                         background=colors[1],
-                         graph_color = colors[2],
-                         border_color = colors[1],
-                         padding = 0,
-                         border_width = 1,
-                         line_width = 1,
-                         ),
+                        font="Noto Sans",
+                        fontsize=12,
+                        bandwidth="down",
+                        interface="auto",
+                        fill_color = colors[2],
+                        foreground=colors[2],
+                        background=colors[1],
+                        graph_color = colors[2],
+                        border_color = colors[1],
+                        padding = 0,
+                        border_width = 1,
+                        line_width = 1,
+                        ),
                widget.Sep(
                         linewidth = 1,
                         padding = 20,
@@ -302,13 +303,12 @@ def init_widgets_list():
                #          ),
                widget.Memory(
                         font="Ubuntu Mono Bold",
-                        measure_mem = 'M',
                         format = '{MemUsed: .0f}{mm} /{MemTotal: .0f}{mm}',
                         update_interval = 1,
-                        fontsize = 16,
+                        fontsize = 15,
                         foreground = colors[2],
                         background = colors[1],
-                       ),
+                        ),
                widget.Sep(
                         linewidth = 1,
                         padding = 20,
@@ -335,20 +335,20 @@ def init_widgets_list():
                         ),
                arcobattery.BatteryIcon(
                         padding=0,
-                        scale=0.5,
-                        y_poss=5,
+                        scale=0.7,
+                        y_poss=2,
                         theme_path=home + "/.config/qtile/icons/battery_icons_horiz",
-                        update_interval = 10,
+                        update_interval = 5,
                         background = colors[1]
                         ),
                widget.Battery(
-                         font="Ubuntu Mono Bold",
-                         format='{percent:2.0%}',
-                         update_interval = 10,
-                         fontsize = 16,
-                         foreground = colors[2],
-                         background = colors[1],
-	                     ),
+                        font="Ubuntu Mono Bold",
+                        format='{percent:2.0%}',
+                        update_interval = 10,
+                        fontsize = 16,
+                        foreground = colors[2],
+                        background = colors[1],
+	                    ),
                widget.Sep(
                         linewidth = 1,
                         padding = 10,
@@ -415,29 +415,30 @@ follow_mouse_focus = False
 bring_front_click = False
 cursor_warp = False
 floating_layout = layout.Floating(float_rules=[
-    {'wmclass': 'Arcolinux-welcome-app.py'},
-    {'wmclass': 'Arcolinux-tweak-tool.py'},
-    {'wmclass': 'Arcolinux-calamares-tool.py'},
-    {'wmclass': 'confirm'},
-    {'wmclass': 'dialog'},
-    {'wmclass': 'download'},
-    {'wmclass': 'error'},
-    {'wmclass': 'file_progress'},
-    {'wmclass': 'notification'},
-    {'wmclass': 'splash'},
-    {'wmclass': 'toolbar'},
-    {'wmclass': 'confirmreset'},
-    {'wmclass': 'makebranch'},
-    {'wmclass': 'maketag'},
-    {'wmclass': 'Arandr'},
-    {'wmclass': 'feh'},
-    {'wmclass': 'Galculator'},
-    {'wmclass': 'arcolinux-logout'},
-    {'wmclass': 'xfce4-terminal'},
-    {'wname': 'branchdialog'},
-    {'wname': 'Open File'},
-    {'wname': 'pinentry'},
-    {'wmclass': 'ssh-askpass'},
+    # Run the utility of `xprop` to see the wm class and name of an X client.
+    *layout.Floating.default_float_rules, 
+    Match(wm_class='confirmreset'),  # gitk
+    Match(wm_class='makebranch'),  # gitk
+    Match(wm_class='maketag'),  # gitk
+    Match(wm_class='ssh-askpass'),  # ssh-askpass
+    Match(title='branchdialog'),  # gitk
+    Match(title='pinentry'),  # GPG key password entry
+    Match(wm_class='Arcolinux-welcome-app.py'),
+    Match(wm_class='Arcolinux-tweak-tool.py'),
+    Match(wm_class='Arcolinux-calamares-tool.py'),
+    Match(wm_class='confirm'),
+    Match(wm_class='dialog'),
+    Match(wm_class='download'),
+    Match(wm_class='error'),
+    Match(wm_class='file_progress'),
+    Match(wm_class='notification'),
+    Match(wm_class='splash'),
+    Match(wm_class='toolbar'),
+    Match(wm_class='Arandr'),
+    Match(wm_class='feh'),
+    Match(wm_class='Galculator'),
+    Match(wm_class='arcolinux-logout'),
+    Match(wm_class='xfce4-terminal'),
 
 ],  fullscreen_border_width = 0, border_width = 0)
 auto_fullscreen = True
