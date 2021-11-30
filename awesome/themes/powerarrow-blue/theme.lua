@@ -15,23 +15,23 @@ local my_table = awful.util.table or gears.table -- 4.{0,1} compatibility
 
 local theme                                     = {}
 theme.dir                                       = os.getenv("HOME") .. "/.config/awesome/themes/powerarrow-blue"
-theme.font                                      = "Roboto Mono Medium 10"
+theme.font                                      = "Ubuntu Mono Regular 10"
 theme.taglist_font                              = "Font Awesome 5 Free Solid 14"
 theme.fg_normal                                 = "#ffffff"
 theme.fg_blue                                   = "#174DCB"
-theme.fg_magenta                                = "#CC00CC"
-theme.fg_focus                                  = "#CC00CC"
+theme.fg_magenta                                = "#CC6600"
+theme.fg_focus                                  = "#CC6600"
 theme.fg_urgent                                 = "#b74822"
-theme.bg_normal                                 = "#22242F"
-theme.bg_focus                                  = "#174DCB" .. "90"
+theme.bg_normal                                 = "#222222"
+theme.bg_focus                                  = "#660066" .. "90"
 theme.bg_urgent                                 = "#3F3F3F"
-theme.taglist_fg_focus                          = "#282a36"
+theme.taglist_fg_focus                          = "#000000"
 theme.tasklist_bg_focus                         = "#000000"
-theme.tasklist_fg_focus                         = "#CC00CC"
+theme.tasklist_fg_focus                         = "#CC6600"
 theme.border_width                              = 2
-theme.border_normal                             = "#330033"
-theme.border_focus                              = "#990099"
-theme.border_marked                             = "#990099"
+theme.border_normal                             = "#663300"
+theme.border_focus                              = "#994C00"
+theme.border_marked                             = "#994C00"
 theme.titlebar_bg_focus                         = "#3F3F3F"
 theme.titlebar_bg_normal                        = "#3F3F3F"
 theme.titlebar_bg_focus                         = theme.bg_focus
@@ -74,7 +74,7 @@ theme.widget_scissors                           = theme.dir .. "/icons/scissors.
 theme.widget_weather                            = theme.dir .. "/icons/dish.png"
 theme.tasklist_plain_task_name                  = true
 theme.tasklist_disable_icon                     = true
-theme.useless_gap                               = 15
+theme.useless_gap                               = 8
 theme.titlebar_close_button_focus               = theme.dir .. "/icons/titlebar/close_focus.png"
 theme.titlebar_close_button_normal              = theme.dir .. "/icons/titlebar/close_normal.png"
 theme.titlebar_ontop_button_focus_active        = theme.dir .. "/icons/titlebar/ontop_focus_active.png"
@@ -93,7 +93,7 @@ theme.titlebar_maximized_button_focus_active    = theme.dir .. "/icons/titlebar/
 theme.titlebar_maximized_button_normal_active   = theme.dir .. "/icons/titlebar/maximized_normal_active.png"
 theme.titlebar_maximized_button_focus_inactive  = theme.dir .. "/icons/titlebar/maximized_focus_inactive.png"
 theme.titlebar_maximized_button_normal_inactive = theme.dir .. "/icons/titlebar/maximized_normal_inactive.png"
-theme.bg_systray                                = "#22242F"
+theme.bg_systray                                = "#222222"
 
 local markup = lain.util.markup
 local separators = lain.util.separators
@@ -113,7 +113,7 @@ theme.cal = lain.widget.cal({
     attach_to = { clock },
     notification_preset = {
         font = "Roboto Mono Medium 10",
-        fg   = theme.fg_blue,
+        fg   = theme.border_focus,
         bg   = theme.bg_normal
     }
 })
@@ -259,7 +259,7 @@ function theme.at_screen_connect(s)
 
     end
 
-    s.mywibox = awful.wibar({ position = "top", screen = s, shape = custom_shape, height = 28, width = 1880, border_color = "#330033", border_width = 3, bg = theme.bg_normal, fg = theme.fg_magenta })
+    s.mywibox = awful.wibar({ position = "top", screen = s, shape = custom_shape, height = 28, width = 1880, border_color = "#331900", border_width = 2, bg = theme.bg_normal, fg = theme.fg_magenta })
 
     tbox_separator = wibox.widget.textbox(" | ")
 

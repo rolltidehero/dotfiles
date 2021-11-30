@@ -71,7 +71,7 @@ local browser           = "qutebrowser"
 local editor            = os.getenv("EDITOR") or "vim"
 local editorgui         = "gedit"
 local filemanager       = "pcmanfm"
-local terminal          = "terminator"
+local terminal          = "kitty"
 
 -- awesome variables
 awful.util.terminal = terminal
