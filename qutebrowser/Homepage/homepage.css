@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css?family=Anton');
 
 body {
-    background-image: url('another-dimension.jpg');
+    background-image: url('Digital.jpg');
     margin: 0px;
     overflow: hidden;
 }
@@ -22,7 +22,7 @@ body {
     font-size: 4.0rem;
     font-weight: 600;
     font-family: "Anton";
-    color: #CC00CC;
+    color: #994C00;
     text-shadow: 5px 5px 5px black;
     margin-bottom: .25em;
 }
@@ -88,10 +88,10 @@ body {
 
 .bookmark-set{
     padding: 1em;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(22, 22, 22);
     border-radius: 25px;
     border-style: double;
-    border-color: #CC00CC;
+    border-color: #994C00;
     font-family: "Roboto Mono";
     font-size: .85rem;
     width: 25%;
@@ -117,5 +117,5 @@ body {
     margin: .4em 0em;
 }
 .bookmark:hover {
-    color: #CC00CC;
+    color: #660066;
 }
