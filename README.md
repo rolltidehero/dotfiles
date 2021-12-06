@@ -16,14 +16,6 @@ chmod +x install.sh
 ```
 3. Make sure you go through and backup existing directories. Use the backup section of the install script for this. 
 
-# Qtile
-
-![alt text](https://i.imgur.com/w141Rv7.png "Qtile Screenshot")
-
-- Workplace Icons on the bar are from the Font Awesome 5 Free pack, without this installed you will only see text instead of the workplace icons
-- Compositor in use is Picom. Config is expected to be in .config/qtile/scripts/picom.conf
-- Picom fork in use is from https://github.com/jonaburg/picom
-
 # AwesomeWM
 
 ![alt text](https://i.imgur.com/GMZSt0x.png "AwesomeWM Screenshot")
@@ -32,9 +24,17 @@ chmod +x install.sh
 - I suggest using XFCE as a base to install AwesomeWM, as this config is looking for a number of standard XFCE programs to function correctly
 - The compositor in use is Picom, the config for this is expected to be found in .config/picom/picom.conf
 
+# Qtile
+
+![alt text](https://i.imgur.com/w141Rv7.png "Qtile Screenshot")
+
+- Workplace Icons on the bar are from the Font Awesome 5 Free pack, without this installed you will only see text instead of the workplace icons
+- Compositor in use is Picom. Config is expected to be in .config/qtile/scripts/picom.conf
+- Picom fork in use is from https://github.com/jonaburg/picom
+
 # Qutebrowser
 
-![alt text](https://i.imgur.com/7IZxWRn.png "Qutebrowser Screenshot")
+![alt text](https://i.imgur.com/ixTvr0F.png "Qutebrowser Screenshot")
 
 - Image shown on Qutebrowser is a custom startpage, check my Startpage repo if you would like this aswell
 - On line 84 in the config.py - Change "username" to your username in the file path
