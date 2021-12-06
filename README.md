@@ -43,7 +43,7 @@ chmod +x install.sh
 
 # Rofi
 
-![alt text](https://i.imgur.com/aQ25B12.png "Rofi Screenshot")
+![alt text](https://i.imgur.com/rj0vGad.png "Rofi Screenshot")
 
 - Custom Rofi theme "Chrollo"
 - Font being used is Ubuntu Mono
