@@ -70,7 +70,7 @@ local modkey1      = "Control"
 local browser           = "qutebrowser"
 local editor            = os.getenv("EDITOR") or "vim"
 local editorgui         = "gedit"
-local filemanager       = "pcmanfm"
+local filemanager       = "nautilus"
 local terminal          = "kitty"
 
 -- awesome variables
@@ -184,13 +184,16 @@ globalkeys = my_table.join(
 
     -- {{{ Personal keybindings
     -- dmenu
-    awful.key({ altkey }, "space",
-    function ()
-        awful.spawn(string.format("dmenu_run",
-        beautiful.bg_normal, beautiful.fg_normal, beautiful.bg_focus, beautiful.fg_focus))
-    end,
-    {description = "show dmenu", group = "hotkeys"}),
-    
+   -- awful.key({ altkey }, "space",
+   -- function ()
+   --     awful.spawn(string.format("dmenu_run",
+   --     beautiful.bg_normal, beautiful.fg_normal, beautiful.bg_focus, beautiful.fg_focus))
+   -- end,
+   -- {description = "show dmenu", group = "hotkeys"}),
+
+    awful.key({ altkey }, "space", function () awful.util.spawn("rofi -show run") end,
+        {description = "rofi" , group = "hotkeys" }),
+
     -- My applications
     awful.key({ modkey }, "e", function () awful.util.spawn("emacs") end,
         {description = "doom emacs" , group = "applications" }),
@@ -198,11 +201,11 @@ globalkeys = my_table.join(
     awful.key({ modkey }, "s", function () awful.util.spawn("flatpak run com.spotify.Client") end,
         {description = "spotify" , group = "applications" }),
 
-    awful.key({ modkey }, "f", function () awful.util.spawn("pcmanfm") end,
-        {description = "pcmanfm" , group = "applications" }),
+    awful.key({ modkey }, "f", function () awful.util.spawn("nautilus") end,
+        {description = "nautilus" , group = "applications" }),
 
-    awful.key({ modkey }, "n", function () awful.util.spawn("notable") end,
-        {description = "notable" , group = "applications" }),
+    awful.key({ modkey }, "n", function () awful.util.spawn("flatpak run net.cozic.joplin_desktop") end,
+        {description = "joplin" , group = "applications" }),
 
     awful.key({ modkey }, "d", function () awful.util.spawn("flatpak run com.discordapp.Discord") end,
         {description = "discord" , group = "applications" }),
@@ -210,7 +213,7 @@ globalkeys = my_table.join(
     awful.key({ modkey }, "g", function () awful.util.spawn("gimp") end,
         {description = "gimp" , group = "applications" }),
 
-    awful.key({ modkey }, "b", function () awful.util.spawn("qutebrowser") end,
+    awful.key({ modkey }, "b", function () awful.util.spawn("firejail qutebrowser") end,
         {description = "qutebrowser" , group = "applications" }),
 
     awful.key({ modkey }, "p", function () awful.util.spawn("xfce4-screenshooter") end,

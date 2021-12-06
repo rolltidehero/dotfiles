@@ -12,12 +12,12 @@
     lightbg:                     rgba ( 238, 232, 213, 100 % );
     selected-active-foreground:  rgba ( 129, 91, 164, 100 % );
     alternate-active-background: rgba ( 47, 30, 46, 18 % );
-    background:                  rgba ( 00, 00, 00, 75 % );
+    background:                  rgba ( 22, 22, 22, 100 % );
     bordercolor:                 rgba ( 239, 97, 85, 21 % );
     alternate-normal-foreground: @foreground;
     normal-background:           rgba ( 04, 00, 14, 0 % );
     lightfg:                     rgba ( 88, 104, 117, 100 % );
-    selected-normal-background:  rgba ( 204, 0, 102, 33 % );
+    selected-normal-background:  rgba ( 102, 0, 102, 33 % );
     border-color:                @foreground;
     spacing:                     1;
     separatorcolor:              rgba ( 239, 97, 85, 18 % );
@@ -31,9 +31,10 @@
 }
 window {
     background-color: @background;
-    border:           0;
+    border:           1;
+    border-color:     #CC6600;
     padding:          0;
-    font:             "Ubuntu Mono 13";
+    font:             "Ubuntu Mono Regular 14";
     width:	      35%;
     height:           25%;
 }
