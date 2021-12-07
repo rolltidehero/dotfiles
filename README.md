@@ -34,7 +34,7 @@ chmod +x install.sh
 
 # Qutebrowser
 
-![alt text](https://i.imgur.com/ixTvr0F.png "Qutebrowser Screenshot")
+![alt text](https://i.imgur.com/XI6OA89.png "Qutebrowser Screenshot")
 
 - Image shown on Qutebrowser is a custom startpage, check my Startpage repo if you would like this aswell
 - On line 84 in the config.py - Change "username" to your username in the file path
