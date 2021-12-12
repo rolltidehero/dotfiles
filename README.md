@@ -6,7 +6,7 @@
 
 1. Clone respository to your computer and make the install script executable:
 ```
-git clone https://github.com/DanCarzano/dotfiles
+git clone https://github.com/rolltidehero/dotfiles
 cd dotfiles
 chmod +x install.sh
 ```
